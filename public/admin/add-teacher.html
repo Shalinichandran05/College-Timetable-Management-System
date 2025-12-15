@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Teacher</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/app.js" defer></script>
+</head>
+<body class="add-teacher-page">
+    <h1 class="page-title">Add Teacher</h1>
+    <form id="add-teacher-form" class="form-container">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" required></textarea>
+        
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" required>
+        
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" required>
+        
+        <button type="submit" class="submit-button">Add</button>
+    </form>
+    <button onclick="location.href='dashboard.html'" class="back-button">Back to Dashboard</button>
+</body>
+</html>

@@ -1,0 +1,999 @@
+
+/* initial page */
+body.home-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('../images/back.gif') no-repeat center center fixed;
+    background-size: cover; /* Ensure the GIF covers the entire screen */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars caused by background GIF */
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Heading with Cursive Font */
+.cursive-title {
+    font-family: 'Dancing Script', cursive; /* Cursive Font */
+    font-size: 3rem; /* Larger Font Size */
+    margin-bottom: 30px;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle Text Shadow */
+}
+
+
+/* Navigation Links */
+.navigation {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center horizontally */
+    gap: 20px; /* Add space between buttons */
+}
+
+.navigation li {
+    margin: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.admin-link {
+    background-color: #ff4b5c;
+    color: white;
+}
+
+.faculty-link {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Hover Effects */
+.nav-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .navigation {
+        flex-direction: column; /* Align items vertically on smaller screens */
+        gap: 15px; /* Adjust gap for vertical alignment */
+    }
+}
+
+/* admin login page */
+body.admin-login-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('/images/image8.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Container for Login Form */
+.login-container {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Title */
+.login-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f4f4f4;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Login Form */
+.login-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.login-button, .back-button {
+    width: auto; /* Fit the button width to its content */
+    padding: 6px 20px; /* Reduced padding (vertical: 6px, horizontal: 20px) */
+    margin-top: 10px;
+    font-size: 0.9rem; /* Slightly smaller font size for compact buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Login Button */
+.login-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Back to Home Button */
+.back-button {
+    background-color: #ff4b5c;
+    color: white;
+}
+
+/* Hover Effects */
+.login-button:hover, .back-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px 30px;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+
+    .login-form input {
+        font-size: 0.9rem;
+    }
+
+    .login-button, .back-button {
+        font-size: 0.8rem; /* Further reduced font size for smaller screens */
+        padding: 6px 10px; /* Further reduced padding for smaller screens */
+    }
+}
+
+/* Dashboard Page */
+body.admin-dashboard-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('/images/image3.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the screen */
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Center Container */
+.center-container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Space between title and the first option */
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Dashboard Options */
+.dashboard-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between each option */
+}
+
+.dashboard-options li {
+    text-align: center;
+}
+
+.dashboard-options a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 12px 24px; /* Equal padding: 12px (top/bottom), 24px (left/right) */
+    color: #fff;
+    background-color: rgba(76, 175, 80, 0.8); /* Slightly transparent green */
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect for Options */
+.dashboard-options a:hover {
+    background-color: rgba(76, 175, 80, 0.9); /* Slightly less transparent on hover */
+    transform: scale(1.05);
+}
+
+/* Logout Button */
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1rem;
+    padding: 8px 16px;
+    color: white;
+    background-color: #ff4b5c;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect for Logout Button */
+.logout-button:hover {
+    background-color: #e63946;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-title {
+        font-size: 1.8rem;
+    }
+
+    .dashboard-options a {
+        font-size: 1rem;
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .logout-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Add Teacher Page */
+body.add-teacher-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('../images/image4.1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    overflow: hidden; /* Prevent overflow of the content */
+}
+
+/* Page Title */
+.page-title {
+    font-size: 2.5rem;
+    margin-top: 40px;
+    text-align: center;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px; /* Add margin at the bottom to separate from the container */
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    margin-top: 40px; /* Added space from title */
+}
+
+/* Form Labels */
+.form-container label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Form Inputs */
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 12px 20px; /* Adjusted padding to match button size */
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure the padding doesn't overflow */
+}
+
+/* Adjust textarea specifically to reduce height */
+.form-container textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 30px; /* Reduced minimum height for the address field */
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 12px 20px; /* Adjusted padding to match other form fields */
+    font-size: 1rem;
+    color: white;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Full width to match input fields */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box; /* Ensure the padding is accounted for */
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    color: white;
+    background-color: #ff4b5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #e63946;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        padding: 15px 20px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .back-button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Add Classroom Page */
+body.add-classroom-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('/images/image4.1.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the screen */
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Page Title */
+.page-title {
+    font-size: 2.5rem;
+    margin-top: 20px; /* Keeps the title near the top */
+    text-align: center;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 30px; /* Positions the title at the top-center */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Form Container */
+.form-container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    padding: 20px 30px; /* Added padding for right space */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between fields */
+    position: absolute;
+    top: 50%; /* Centers the container vertically */
+    left: 50%; /* Centers the container horizontally */
+    transform: translate(-50%, -50%); /* Ensures exact centering */
+}
+
+/* Form Labels */
+.form-container label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Form Inputs */
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 6px 12px; /* Reduced padding for smaller button */
+    font-size: 0.9rem; /* Smaller font size */
+    color: white;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Button size will adapt to the content size */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    color: white;
+    background-color: #ff4b5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #e63946;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        padding: 15px 20px; /* Adjusted padding for smaller screens */
+    }
+
+    .form-container input {
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        font-size: 0.8rem; /* Further reduced font size for smaller screens */
+        padding: 4px 10px; /* Further reduced padding */
+    }
+
+    .back-button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+/* Add Course Page */
+body.add-course-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('/images/image4.1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    
+    /* Flexbox properties for centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the content vertically */
+    align-items: center; /* Centers the content horizontally */
+}
+
+/* Page Title */
+.page-title {
+    font-size: 2.5rem;
+    margin: 20px auto 80px;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* Form Container */
+.form-container {
+    width: 90%;
+    max-width: 450px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Subject fields container */
+#subject-wrapper {
+    display: block !important; /* Ensure visibility */
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Dynamically created fields */
+#subject-fields > div {
+    margin-bottom: 15px;
+}
+
+/* Form Labels */
+.form-container label {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Form Inputs and Select */
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.button,
+.submit-button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+/* Button Hover */
+.button {
+    background-color: #2196f3;
+    color: white;
+}
+
+.button:hover {
+    background-color: #1976d2;
+    transform: scale(1.05);
+}
+
+.submit-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    color: white;
+    background-color: #ff4b5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #e63946;
+    transform: scale(1.1);
+}
+
+
+/* Courses Page */
+body.courses-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('/images/image4.1.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the screen */
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Page Title */
+.page-title {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    text-align: center;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 30px; /* Positions the title at the top-center */
+    left: 50%;
+    transform: translateX(-50%); /* Ensures the title is centered horizontally */
+}
+
+/* Courses Container */
+.courses-container {
+    width: 90%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4cm, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between buttons */
+    margin-top: 100px; /* Adds space from the title */
+    justify-items: center;
+}
+
+/* Course Buttons */
+.courses-container .course-button {
+    width: 3cm; /* Fixed width */
+    height: 3cm; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(253, 70, 177, 0.986); /* Green color */
+    color: white;
+    font-size: 1.2rem; /* Adjusted font size */
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.courses-container .course-button:hover {
+    background-color: rgb(248, 135, 182); /* Slightly darker green on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Add a stronger shadow on hover */
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    color: white;
+    background-color: #ff4b5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #e63946;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .courses-container {
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+
+    .courses-container .course-button {
+        width: 4cm; /* Fixed size remains */
+        height: 4cm; /* Fixed size remains */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .back-button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+/* === Timetable Page Styles === */
+.timetable-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('/images/image4.1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.timetable-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.timetable-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.timetable-container label,
+.timetable-container select,
+.timetable-container button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.timetable-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generate-timetable-btn.timetable-btn {
+    background-color: #2196f3; /* Blue */
+    color: white;
+}
+
+#save-timetable.timetable-btn {
+    background-color: #45a049; /* Green */
+    color: white;
+}
+
+.back-dashboard-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-dashboard-btn:hover {
+    background-color: #e63946;
+    transform: scale(1.1);
+}
+
+.timetable-output {
+    width: fit-content;
+    margin: 30px auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
+}
+
+.timetable-output table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.timetable-output th,
+.timetable-output td {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    text-align: center;
+    min-width: 120px;
+}
+
+.timetable-output th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+.timetable-output tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.timetable-output tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.timetable-output caption {
+    caption-side: top;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* === view timetable Page Styles === */
+/* Background and layout */
+.view-page {
+    font-family: Arial, sans-serif;
+    background-image: url('/images/image4.1.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #222;
+}
+
+/* Title */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Navigation button */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #e63946;
+    transform: scale(1.1);
+}
+
+/* Timetable container */
+.timetables-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual timetable */
+.styled-timetable {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Course name */
+.course-name {
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+/* Timetable table */
+.timetable-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.timetable-table th,
+.timetable-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    background-color: #fdfdfd;
+}
+
+.timetable-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Delete button */
+.delete-btn {
+    margin-top: 15px;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}

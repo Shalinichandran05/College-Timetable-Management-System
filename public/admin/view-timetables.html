@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Saved Timetables</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Assuming shared CSS -->
+</head>
+<body class="view-page">
+
+    <h1 class="page-title">Saved Timetables</h1>
+    <br>
+    <br>
+    <br>
+
+    <!-- Back to Dashboard Button -->
+    <div class="navigation">
+        <button class="back-btn" onclick="location.href='/admin/dashboard.html'">Back to Dashboard</button>
+    </div>
+
+    <div id="saved-timetables" class="timetables-wrapper">
+        <!-- Timetables will be dynamically loaded here -->
+    </div>
+
+    <script>
+        // Load and display timetables
+        async function loadTimetables() {
+            try {
+                const response = await fetch('/admin/view-timetables');
+                if (!response.ok) throw new Error('Failed to fetch timetables');
+
+                const timetables = await response.json();
+                const savedTimetablesDiv = document.getElementById('saved-timetables');
+                savedTimetablesDiv.innerHTML = '';
+
+                timetables.forEach(timetable => {
+                    const timetableDiv = document.createElement('div');
+                    timetableDiv.className = 'styled-timetable';
+                    timetableDiv.id = `timetable-${timetable.id}`;
+
+                    timetableDiv.innerHTML = `
+                        <h3 class="course-name">Timetable for ${timetable.courseName || 'Unknown Course'}</h3>
+                        <p>Room Number: <strong>${timetable.roomNumber}</strong></p>
+                        <p>Lectures Per Day: <strong>${timetable.lecturesPerDay}</strong></p>
+                        ${generateTimetableTable(timetable.timetable, timetable.lecturesPerDay)}
+                        <button class="delete-btn" onclick="deleteTimetable(${timetable.id})">Delete</button>
+                    `;
+
+                    savedTimetablesDiv.appendChild(timetableDiv);
+                });
+            } catch (error) {
+                console.error('Error loading timetables:', error);
+                alert('Failed to load timetables. Please try again.');
+            }
+        }
+
+        function generateTimetableTable(timetableData, lecturesPerDay) {
+            const orderedDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+            let tableHTML = '<table class="timetable-table">';
+            tableHTML += '<thead><tr><th>Day</th>';
+            for (let i = 1; i <= lecturesPerDay; i++) {
+                tableHTML += `<th>Lecture ${i}</th>`;
+            }
+            tableHTML += '</tr></thead><tbody>';
+
+            orderedDays.forEach(day => {
+                tableHTML += `<tr><td>${day}</td>`;
+                const lectures = timetableData[day] || [];
+                lectures.forEach(lecture => {
+                    tableHTML += `<td>${lecture.subjectName}<br><small>${lecture.teacherName}</small></td>`;
+                });
+
+                for (let i = lectures.length; i < lecturesPerDay; i++) {
+                    tableHTML += '<td>—</td>';
+                }
+
+                tableHTML += '</tr>';
+            });
+
+            tableHTML += '</tbody></table>';
+            return tableHTML;
+        }
+
+        async function deleteTimetable(id) {
+            if (confirm('Are you sure you want to delete this timetable?')) {
+                try {
+                    const response = await fetch(`/admin/delete-timetable/${id}`, { method: 'DELETE' });
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        alert(result.message);
+                        document.getElementById(`timetable-${id}`).remove();
+                    } else {
+                        alert(result.message);
+                    }
+                } catch (error) {
+                    console.error('Error deleting timetable:', error);
+                    alert('Error deleting timetable. Please try again.');
+                }
+            }
+        }
+
+        window.onload = loadTimetables;
+    </script>
+</body>
+</html>

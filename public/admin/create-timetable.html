@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Timetable</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/configure-timetable.js" defer></script>
+</head>
+<body class="timetable-body">
+    <button class="back-dashboard-btn" onclick="location.href='/admin/dashboard.html'">Back to Dashboard</button>
+
+    <h1 class="timetable-title">Timetable for <span id="course-name"></span></h1>
+
+    <div class="timetable-container">
+        <form id="configure-timetable-form">
+            <label for="room-number">Room Number:</label>
+            <select id="room-number" name="room-number" required></select>
+
+            <label for="lectures-per-day">Number of Lectures per Day:</label>
+            <select id="lectures-per-day" name="lectures-per-day" required>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+
+            <button type="button" id="generate-timetable-btn" class="timetable-btn">Generate Timetable</button>
+        </form>
+
+        <button id="save-timetable" class="timetable-btn">Save</button>
+    </div>
+
+    <div id="timetable-container" class="timetable-output"></div>
+</body>
+</html>
